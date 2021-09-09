@@ -11,9 +11,8 @@ namespace PrimjerTDD_a_RimskiBrojevi
         List<RimskiBrojevi> PopuniListu()
         {
             List<RimskiBrojevi> listaBrojeva = new List<RimskiBrojevi>();
+            listaBrojeva.Add(new RimskiBrojevi(5, "V"));
             listaBrojeva.Add(new RimskiBrojevi(4, "IV"));
-            listaBrojeva.Add(new RimskiBrojevi(3, "III"));
-            listaBrojeva.Add(new RimskiBrojevi(2, "II"));
             listaBrojeva.Add(new RimskiBrojevi(1, "I"));
 
             return listaBrojeva;
@@ -21,13 +20,18 @@ namespace PrimjerTDD_a_RimskiBrojevi
         public string Pretvori(int broj)
         {
             List<RimskiBrojevi> listaBrojeva = PopuniListu();
+            string rezultat = string.Empty;
 
             foreach (var item in listaBrojeva)
             {
-                if (item.ArapskiBroj == broj)
-                    return item.RimskiBroj;
+                for (int i = broj; i >= item.ArapskiBroj; i -= item.ArapskiBroj)
+                {
+                    rezultat += item.RimskiBroj;
+                    if (rezultat != "") 
+                        broj -= item.ArapskiBroj;
+                }
             }
-            return String.Empty; ;
+            return rezultat;
         }
     }
 }
