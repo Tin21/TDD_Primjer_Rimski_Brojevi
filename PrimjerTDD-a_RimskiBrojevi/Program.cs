@@ -10,6 +10,12 @@ namespace PrimjerTDD_a_RimskiBrojevi
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Unesite broj koji želite pretvoriti u rimski: ");
+            int arapskiBroj = int.Parse(Console.ReadLine());
+            Konverter konverter = new Konverter();
+            string rimskiBroj = konverter.Pretvori(arapskiBroj);
+            Console.WriteLine(rimskiBroj);
+            Console.Read();
         }
     }
 }
