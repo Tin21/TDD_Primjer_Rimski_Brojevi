@@ -15,6 +15,8 @@ namespace PrimjerTDD_a_RimskiBrojevi
             {
                 rezultat += "I";
             }
+            if (broj == 4)
+                return "IV";
             return rezultat;
         }
     }
