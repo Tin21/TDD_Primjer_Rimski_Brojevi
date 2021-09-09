@@ -21,6 +21,6 @@ namespace JedinicniTestovi
             Konverter konverter = new Konverter();
             string rimski = konverter.Pretvori(2);
             Assert.AreEqual(rimski, "II");
-        }
+        } 
     }
 }

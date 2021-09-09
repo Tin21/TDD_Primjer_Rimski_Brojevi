@@ -10,11 +10,12 @@ namespace PrimjerTDD_a_RimskiBrojevi
     {
         public string Pretvori(int broj)
         {
-            if (broj == 1)
-                return "I";
-            if (broj == 2)
-                return "II";
-            return String.Empty;
+            string rezultat = String.Empty;
+            for (int i = broj; i > 0; i--)
+            {
+                rezultat += "I";
+            }
+            return rezultat;
         }
     }
 }
