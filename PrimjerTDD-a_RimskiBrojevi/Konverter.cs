@@ -12,6 +12,8 @@ namespace PrimjerTDD_a_RimskiBrojevi
         {
             if (broj == 1)
                 return "I";
+            if (broj == 2)
+                return "II";
             return String.Empty;
         }
     }
