@@ -11,6 +11,8 @@ namespace PrimjerTDD_a_RimskiBrojevi
         List<RimskiBrojevi> PopuniListu()
         {
             List<RimskiBrojevi> listaBrojeva = new List<RimskiBrojevi>();
+            listaBrojeva.Add(new RimskiBrojevi(10, "X"));
+            listaBrojeva.Add(new RimskiBrojevi(9, "IX"));
             listaBrojeva.Add(new RimskiBrojevi(5, "V"));
             listaBrojeva.Add(new RimskiBrojevi(4, "IV"));
             listaBrojeva.Add(new RimskiBrojevi(1, "I"));
