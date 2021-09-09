@@ -21,6 +21,14 @@ namespace JedinicniTestovi
             Konverter konverter = new Konverter();
             string rimski = konverter.Pretvori(2);
             Assert.AreEqual(rimski, "II");
-        } 
+        }
+
+        [TestMethod]
+        public void Test_Pretvaranja_Broja_3_U_Rimski()
+        {
+            Konverter konverter = new Konverter();
+            string rimski = konverter.Pretvori(3);
+            Assert.AreEqual(rimski, "III");
+        }
     }
 }
