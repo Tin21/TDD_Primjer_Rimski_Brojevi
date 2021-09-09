@@ -8,16 +8,26 @@ namespace PrimjerTDD_a_RimskiBrojevi
 {
     public class Konverter
     {
+        List<RimskiBrojevi> PopuniListu()
+        {
+            List<RimskiBrojevi> listaBrojeva = new List<RimskiBrojevi>();
+            listaBrojeva.Add(new RimskiBrojevi(4, "IV"));
+            listaBrojeva.Add(new RimskiBrojevi(3, "III"));
+            listaBrojeva.Add(new RimskiBrojevi(2, "II"));
+            listaBrojeva.Add(new RimskiBrojevi(1, "I"));
+
+            return listaBrojeva;
+        }
         public string Pretvori(int broj)
         {
-            string rezultat = String.Empty;
-            for (int i = broj; i > 0; i--)
+            List<RimskiBrojevi> listaBrojeva = PopuniListu();
+
+            foreach (var item in listaBrojeva)
             {
-                rezultat += "I";
+                if (item.ArapskiBroj == broj)
+                    return item.RimskiBroj;
             }
-            if (broj == 4)
-                return "IV";
-            return rezultat;
+            return String.Empty; ;
         }
     }
 }

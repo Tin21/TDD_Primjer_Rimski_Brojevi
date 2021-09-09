@@ -46,6 +46,7 @@
     <Compile Include="Konverter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RimskiBrojevi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
